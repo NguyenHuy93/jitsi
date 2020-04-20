@@ -33,7 +33,7 @@ VirtualHost "{{ .Env.XMPP_DOMAIN }}"
     cyrus_application_name = "xmpp"
     allow_unencrypted_plain_auth = true
   {{ else if eq $AUTH_TYPE "internal" }}
-    authentication = "internal_hashed"
+    authentication = "internal_plain"
   {{ end }}
 {{ else }}
     authentication = "anonymous"
